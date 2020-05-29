@@ -16,4 +16,8 @@ class Ghibli_films
         @@all
     end
 
+    self.save
+    @@all
+end
+
 end
