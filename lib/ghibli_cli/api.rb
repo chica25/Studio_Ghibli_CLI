@@ -8,9 +8,8 @@ class Api
          title = movie["title"]
          description = movie["description"]
          release_date = movie["release_date"]
-         binding.pry
+         #binding.pry
          ghibli_films.new(id, title, release_date, description)
-        
         end
     end
 end
