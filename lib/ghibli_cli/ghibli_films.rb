@@ -1,14 +1,15 @@
 class Ghibli_films
     puts "cli loaded"
 
-    attr_accessor :id, :title, :release_date, :description
+    attr_accessor :id, :title, :release_date, :description, :director
     @@all = []
          
-    def initialize(id, title, release_date, description)
+    def initialize(id, title, release_date, description, director)
         @id = id
         @title = title
         @release_date = release_date
         @description = description
+        @director = director
         @@all << self
     end
 
