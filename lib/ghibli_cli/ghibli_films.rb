@@ -1,5 +1,4 @@
 class Ghibli_films
-    puts "cli loaded"
 
     attr_accessor :id, :title, :release_date, :description, :director
     @@all = []
