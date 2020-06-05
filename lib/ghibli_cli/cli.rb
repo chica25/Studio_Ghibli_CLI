@@ -24,7 +24,7 @@ class Cli
         end
 
     def movie_title
-        Ghibli_films.all.each_with_index do |film, index|
+        Studio_Ghibli.all.each_with_index do |film, index|
          puts " #{index + 1}. #{film.title}"
          #sleep 0.5
         end
@@ -36,7 +36,7 @@ class Cli
 
     #if user selects a movie title
     def test
-        Ghibli_films.all.find do |film| 
+        Studio_Ghibli.all.find do |film| 
              film.title = "Ponyo"
             puts film.title
         end

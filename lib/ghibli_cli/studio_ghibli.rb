@@ -1,4 +1,4 @@
-class Ghibli_films
+class Studio_Ghibli
 
     attr_accessor :id, :title, :release_date, :description, :director
     @@all = []

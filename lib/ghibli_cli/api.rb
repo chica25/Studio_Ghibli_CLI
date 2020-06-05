@@ -11,7 +11,7 @@ class Api
          release_date = movie["release_date"]
          director = movie["director"]
         #binding.pry
-         Ghibli_films.new(id, title, release_date, description, director)
+        Studio_Ghibli.new(id, title, release_date, description, director)
         # binding.pry
         end
     end
