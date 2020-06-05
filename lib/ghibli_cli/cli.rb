@@ -1,10 +1,10 @@
 class Cli
     #1 welcome the user
         def run
-        puts "----------- Welcome to Ghibli films! ----------- "
+        puts "Welcome to Ghibli films!"
         sleep 1
-        puts "Here is a list of movies"
-        sleep 1
+        puts "Here is a list of movies:"
+        # sleep 1
         Api.get_movies
          #2 print list of movies
         print_movie_titles 
@@ -27,6 +27,7 @@ class Cli
         movie_title
     end
 
+    #if user selects a movie title
     def test
         Ghibli_films.all.find do |film| 
              film.title = "Ponyo"
@@ -44,8 +45,8 @@ class Cli
         end
     end
 
-    def goodbye
-        puts "Goodbye!"
-    end
+    # def goodbye
+    #     puts "Goodbye!"
+    # end
 
 end
