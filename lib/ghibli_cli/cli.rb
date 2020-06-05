@@ -1,13 +1,15 @@
 class Cli
+    #1 welcome the user
         def run
-        puts "Welcome to Ghibli films!"
-       # sleep 1
+        puts "----------- Welcome to Ghibli films! ----------- "
+        sleep 1
         puts "Here is a list of movies"
-        #sleep 1
+        sleep 1
         Api.get_movies
+         #2 print list of movies
         print_movie_titles 
-        test
-        puts "Would you like to pick a movie? y/n"
+         test
+        # puts "Would you like to pick a movie? y/n"
     end
 
     def user_input
@@ -33,11 +35,12 @@ class Cli
     end
 
     def selection
+        puts "Would you like to pick a movie? y/n"
         user_input 
-        if user_input == "y"
-
+        if user_input == "yes" 
+            puts "The user said yes"
         else
-            goodbye
+           puts "Goodbye"
         end
     end
 
@@ -46,13 +49,3 @@ class Cli
     end
 
 end
-# def selection
-#     puts "Please enter the movie title:"
-#     user_input = gets.strip.downcase
-#     if user_input == "#{@title}" 
-#     else
-#         puts "Please make another selection"
-#         #binding.pry
-#     end
-
-# end
