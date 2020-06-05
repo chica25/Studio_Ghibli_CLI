@@ -1,25 +1,32 @@
+#--- Notes
+#Introduce user with a welcome
+#Display movie list - Iterate with index 
+# Give the user a movie selection - if/else
+# Give the user another selection once they select the title - release_date, description director 
+
 class Cli
+
     #1 welcome the user
-        def run
+    def run
         puts "Welcome to Ghibli films!"
         sleep 1
-        puts "Here is a list of movies:"
+        puts "Top 20 Movies:"
         # sleep 1
         Api.get_movies
-         #2 print list of movies
-        print_movie_titles 
-         test
-        # puts "Would you like to pick a movie? y/n"
-    end
+            #2 print list of movies
+            print_movie_titles 
+            selection
+            # puts "Would you like to pick a movie? y/n"
+        end
 
-    def user_input
-        gets.chomp 
-    end
+        def user_input
+            gets.chomp 
+        end
 
     def movie_title
         Ghibli_films.all.each_with_index do |film, index|
          puts " #{index + 1}. #{film.title}"
-         sleep 0.5
+         #sleep 0.5
         end
     end    
 
@@ -37,8 +44,8 @@ class Cli
 
     def selection
         puts "Would you like to pick a movie? y/n"
-        user_input 
-        if user_input == "yes" 
+        input = user_input
+        if input == "yes" || input == "y"
             puts "The user said yes"
         else
            puts "Goodbye"
