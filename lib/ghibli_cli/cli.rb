@@ -10,16 +10,12 @@ class Cli
     def run
         puts "Welcome to Ghibli films!"
         sleep 1
-        # sleep 1
         Api.get_movies
         movie_list
         movie_selection
         list_selection
-            #2 print list of movies
-            #print_movie_titles 
-            #selection
-            # puts "Would you like to pick a movie? y/n"
-        end
+        selection
+    end
 
         def user_input
             gets.chomp 
@@ -49,6 +45,8 @@ class Cli
         input = user_input
         if input == "yes" || input == "y"
             print_movie_titles
+            list_selection
+            selection
         else
            puts "Goodbye"
         end
