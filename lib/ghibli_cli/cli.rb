@@ -9,7 +9,7 @@ class Cli
     #1 welcome the user
     def run
         puts "Welcome to Ghibli films!"
-        sleep 1
+        sleep(1)
         Api.get_movies
         movie_list
         movie_selection
@@ -74,12 +74,13 @@ class Cli
     def list_selection
         index = gets.chomp.to_i - 1
         last_element = Studio_Ghibli.all.size - 1
+        # if index.between?(0..-1) 
         if index.between?(0,last_element) 
             movie = Studio_Ghibli.all[index]
-            puts "Movie Title:" + " " + movie.title 
-            puts "Release Date:" + " " + movie.release_date
-            puts "Director:" + " " + movie.director
-            puts "Description:" + " " + movie.description
+            puts "Movie Title:" + " " << movie.title 
+            puts "Release Date:" + " " << movie.release_date
+            puts "Director:" + " " << movie.director
+            puts "Description:" + " " << movie.description
         else
             puts "Please enter a valid number"
             list_selection
