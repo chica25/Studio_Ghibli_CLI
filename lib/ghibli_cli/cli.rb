@@ -22,12 +22,18 @@ class Cli
         gets.chomp.downcase
     end
 
+    # def movie_title
+    #     Studio_Ghibli.all.each_with_index do |film, index|
+    #      puts "#{index + 1}. #{film.title}"
+    #      #sleep 0.5
+    #     end
+    # end    
     def movie_title
-        Studio_Ghibli.all.each_with_index do |film, index|
-         puts "#{index + 1}. #{film.title}"
+        Studio_Ghibli.all.each.with_index(1) do |film, index|
+         puts "#{index}. #{film.title}"
          #sleep 0.5
         end
-    end    
+    end  
 
     def print_movie_titles
         movie_title
@@ -56,7 +62,6 @@ class Cli
     def list_selection
             index = gets.chomp.to_i - 1
             last_element = Studio_Ghibli.all.size - 1
-            # if index.between?(0..-1) 
         if index.between?(0,last_element) 
             system "clear"
             movie = Studio_Ghibli.all[index]
