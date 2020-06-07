@@ -15,6 +15,7 @@ class Cli
         movie_selection
         list_selection
         selection
+        #main - Helps with not repeating your code
     end
 
     def user_input
@@ -57,11 +58,12 @@ class Cli
             last_element = Studio_Ghibli.all.size - 1
             # if index.between?(0..-1) 
         if index.between?(0,last_element) 
+            system "clear"
             movie = Studio_Ghibli.all[index]
-            puts "Movie Title:" + " " << movie.title 
-            puts "Release Date:" + " " << movie.release_date
-            puts "Director:" + " " << movie.director
-            puts "Description:" + " " << movie.description
+            puts "Movie Title: #{movie.title}"
+            puts "Release Date: #{movie.release_date}"
+            puts "Director: #{movie.director}"
+            puts "Description: #{movie.description}"
         else
             puts "Please enter a valid number:"
             list_selection
@@ -69,13 +71,12 @@ class Cli
     end
     
     def selection
-            puts "Would you like to pick another movie? y/n"
+            puts "\n\nWould you like to pick another movie? y/n"
             input = user_input
         if input == "yes" || input == "y"
             print_movie_titles
             list_selection
             selection
-        #elsif input == "n" || input == "no"
         else 
            puts "Goodbye"
         end
