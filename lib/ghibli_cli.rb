@@ -6,3 +6,4 @@ require_relative './ghibli_cli/api.rb'
 require_relative './ghibli_cli/studio_ghibli.rb'
 
 
+ 

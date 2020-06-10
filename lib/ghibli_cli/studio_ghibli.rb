@@ -13,7 +13,9 @@ class Studio_Ghibli
     end
 
     def self.all
+        self
         @@all
     end
 
 end
+puts self
