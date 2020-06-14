@@ -1,7 +1,7 @@
 class Cli
 
     def run
-        puts "WELCOME TO STUDIO GHIBLI FILMS!".colorize(:blue)
+        puts "• • • • • WELCOME TO STUDIO GHIBLI FILMS • • • • • ".colorize(:cyan)
         sleep(1)
         Api.get_movies
         movie_list
@@ -22,7 +22,7 @@ class Cli
 
     def movie_title
         Studio_Ghibli.all.each.with_index(1) do |film, index|
-         puts "#{index}. #{film.title}"
+         puts "#{index}. #{film.title}".colorize(:light_magenta)
         end
     end  
 
@@ -41,13 +41,13 @@ class Cli
     end
 
     def pick_movie
-        puts "Please select a number:"
+        puts "Please select a number:".colorize(:cyan)
         input = gets.chomp.to_i
     end
 
 
     def movie_selection
-        puts "Please select a movie number:"
+        puts "Please select a movie number:".colorize(:cyan)
     end
 
     def list_selection
@@ -61,13 +61,13 @@ class Cli
             puts "Director: #{movie.director}"
             puts "Description: #{movie.description}"
         else
-            puts "Please enter a valid number:"
+            puts "Please enter a valid number:".colorize(:light_red)
             list_selection
         end
     end
     
     def selection
-            puts "\n\nWould you like to pick another movie? y/n"
+            puts "\n\nWould you like to pick another movie? y/n".colorize(:cyan)
             input = user_input
         if input == "yes" || input == "y"
             print_movie_titles
