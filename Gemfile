@@ -10,4 +10,7 @@ gem "byebug"
 gem "pry"
 gem "json"
 gem "rest-client"
+gem 'colorize', '~> 0.8.1'
+
+
 

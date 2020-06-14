@@ -1,32 +1,18 @@
-#--- Notes
-#Introduce user with a welcome
-#Display movie list - Iterate with index 
-# Give the user a movie selection - if/else statement
-# Give the user another selection once they select the title - release_date, description director 
- #main - Helps with not repeating your code
 class Cli
 
     def run
-        puts "WELCOME TO STUDIO GHIBLI FILMS!"
+        puts "WELCOME TO STUDIO GHIBLI FILMS!".colorize(:blue)
         sleep(1)
         Api.get_movies
-        #main
         movie_list
         movie_selection
         list_selection
         selection
     end
     
-    #updated code
-    # def main
-    #     print_all
-    # end
-
-
     def print_all
         Studio_Ghibli.all.each.with_index(1) do |ghibli, index|
             puts "#{index}. #{ghibli.title}"
-       # Studio_Ghibli.all.each {|ghibli| puts "#{ghibli.title}"}
         end
     end
 
@@ -37,7 +23,6 @@ class Cli
     def movie_title
         Studio_Ghibli.all.each.with_index(1) do |film, index|
          puts "#{index}. #{film.title}"
-         #sleep 0.5
         end
     end  
 
@@ -57,7 +42,7 @@ class Cli
 
     def pick_movie
         puts "Please select a number:"
-        input = gets.chomp.to_i 
+        input = gets.chomp.to_i
     end
 
 
@@ -66,9 +51,9 @@ class Cli
     end
 
     def list_selection
-            index = user_input.to_i - 1
+             index = user_input.to_i - 1
             last_element = Studio_Ghibli.all.size - 1
-        if index.between?(0,last_element) 
+         if index.between?(0,last_element) 
             system "clear"
             movie = Studio_Ghibli.all[index]
             puts "Movie Title: #{movie.title}"
