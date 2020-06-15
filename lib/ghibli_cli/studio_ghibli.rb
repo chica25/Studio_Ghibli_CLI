@@ -1,7 +1,6 @@
 class Studio_Ghibli
 
-    # attr_accessor :id, :title, :release_date, :description, :director
-    attr_reader :id, :title, :release_date, :description, :director
+    attr_accessor :id, :title, :release_date, :description, :director
     @@all = []
          
     def initialize(id, title, release_date, description, director)

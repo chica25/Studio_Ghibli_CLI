@@ -1,7 +1,7 @@
 class Cli
 
     def run
-        puts "• • • • • WELCOME TO STUDIO GHIBLI FILMS • • • • • ".colorize(:cyan)
+        puts " • • • • • WELCOME TO STUDIO GHIBLI FILMS • • • • • ".colorize(:cyan)
         sleep(1)
         Api.get_movies
         movie_list
@@ -66,7 +66,7 @@ class Cli
         end
     end
     
-    def selection
+        def selection
             puts "\n\nWould you like to pick another movie? y/n".colorize(:cyan)
             input = user_input
         if input == "yes" || input == "y"
