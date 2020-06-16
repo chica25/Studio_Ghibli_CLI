@@ -8,10 +8,12 @@ API: https://ghibliapi.herokuapp.com/films
 
 Please make sure you have the following gems on your gemfile:
 
-```gem "pry"
+```ruby
+gem "pry"
 gem "json"
 gem "rest-client"
-gem 'colorize', '~> 0.8.1'```
+gem 'colorize', '~> 0.8.1'
+```
 
 And then execute:
 
