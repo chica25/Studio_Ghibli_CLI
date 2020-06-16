@@ -1,6 +1,6 @@
 ## Studio_Ghibli_CLI
 
-Hi there! Welcome to my CLI application! You'll get an overview of [Studio Ghibli API](https://ghibliapi.herokuapp.com/films) movie lists. You'll have several options to get detail information based on the movie you select.  
+Hi there! Welcome to my CLI application! You'll get an overview of [Studio Ghibli API](https://ghibliapi.herokuapp.com) movie lists. You'll have several options to get detail information based on the movie you select.  
 
 ## Installation
 
