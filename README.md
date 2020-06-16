@@ -1,9 +1,8 @@
-# Studio_Ghibli_CLI
+## Studio_Ghibli_CLI
 
-Hi there! Welcome to my CLI project! You'll get an overview of the studio Ghibli API movie lists that gives you several options, to get detail information based on the movie you select. 
+Hi there! Welcome to my CLI application! You'll get an overview of **Studio Ghibli API** movie lists. You'll have several options to get detail information based on the movie you select. 
 
 API: https://ghibliapi.herokuapp.com/films
-
 
 ## Installation
 
@@ -17,11 +16,10 @@ gem 'colorize', '~> 0.8.1'```
 And then execute:
 
 $ bundle install 
-
-## Usage
+ Usage
 
 To run the application, $ ruby bin/run
-
+	
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/run` for an interactive prompt that will allow you to experiment.
@@ -39,3 +37,5 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the ProjectCli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md).
+
+
