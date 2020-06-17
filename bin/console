@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-require_relative '../lib/environment.rb'
+require_relative '../lib/environment'
 
 Pry.start
