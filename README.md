@@ -16,7 +16,7 @@ gem 'colorize', '~> 0.8.1'
 And then execute:
 
 $ bundle install 
- Usage
+ Usage of ghibli-cli
 
 To run the application, $ ruby bin/run
 	

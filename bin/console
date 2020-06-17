@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-require_relative '../lib/ghibli_cli.rb'
+require_relative '../lib/environment.rb'
 
 Pry.start
