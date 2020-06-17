@@ -1,7 +1,7 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|Studio_Ghibli_CLI| "https://github.com/#{Studio_Ghibli_CLI}"}
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem "byebug"
 gem "pry"
