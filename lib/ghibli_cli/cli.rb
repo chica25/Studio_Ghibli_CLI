@@ -11,7 +11,7 @@ class Cli
     
     def print_all
         Studio_Ghibli.all.each.with_index(1) do |list, index|
-            puts "#{index}. #{movie.title}"
+            puts "#{index}. #{movie.list}"
         end
     end
 
@@ -22,24 +22,25 @@ class Cli
     end  
 
     def movie_list
-        puts "Would you like to see the list of movies playing this week? y/n"
+        puts "Would you like to see the list of movies playing this week? y/n"  #.colorize(:cyan)
         input = gets.chomp.downcase
         if input == "yes" || input == "y"
            print_movie_titles
-           puts "Please select a movie number:".colorize(:cyan)
+           puts "Please select a number:".colorize(:cyan)
         else
            puts "Goodbye"
         end
     end
 
-    def movie_selection
-        last_element = Studio_Ghibli.all.size - 1    
-        input = gets.chomp.to_i
-        index = input.to_i - 1
+    def movie_selection   
+         input = gets.chomp.to_i 
+         index = input.to_i - 1 
+       # index = gets.chomp.to_i - 1
+        last_element = Studio_Ghibli.all.size - 1 
         if index.between?(0,last_element) 
             display_movie(index)
         else
-            puts "Invalid input. Let's try again.".colorize(:light_red)     
+            puts "Please enter a valid number:".colorize(:light_red)     
             movie_selection
         end
     end

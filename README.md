@@ -19,6 +19,11 @@ $ bundle install
  Usage of ghibli-cli
 
 To run the application, $ ruby bin/run
+
+## Usage of 
+
+```bin/run
+```
 	
 ## Development
 
