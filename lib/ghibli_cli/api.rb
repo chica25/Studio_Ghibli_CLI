@@ -10,7 +10,7 @@ class Api
          description = movie["description"]
          release_date = movie["release_date"]
          director = movie["director"]
-        Studio_Ghibli.new(id, title, release_date, description, director)
+          Studio_Ghibli.new(id, title, release_date, description, director)
         end
     end
 end
