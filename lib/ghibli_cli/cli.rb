@@ -26,24 +26,22 @@ class Cli
         input = gets.chomp.downcase
         if input == "yes" || input == "y"
            print_movie_titles
-           puts "Please select a number:".colorize(:cyan)
+           puts "Please select a number:"
         else
            puts "Goodbye"
         end
     end
 
     def movie_selection   
-         input = gets.chomp.to_i 
-         index = input.to_i - 1 
-       # index = gets.chomp.to_i - 1
+        index = gets.chomp.to_i - 1
         last_element = Studio_Ghibli.all.size - 1 
-        if index.between?(0,last_element) 
-            display_movie(index)
-        else
-            puts "Please enter a valid number:".colorize(:light_red)     
-            movie_selection
+        until index.between?(0,last_element)
+            puts "Please enter a valid number:".colorize(:light_red) 
+            index = gets.chomp.to_i - 1
         end
-    end
+            list = Studio_Ghibli.all[index]
+            display_movie(index)
+        end
 
     def display_movie(index)
         system "clear"
