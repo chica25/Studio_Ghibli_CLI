@@ -17,3 +17,4 @@ class Studio_Ghibli
     end
 
 end
+
