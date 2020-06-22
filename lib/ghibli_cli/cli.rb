@@ -9,12 +9,6 @@ class Cli
         selection
     end
     
-    # def print_all
-    #     Studio_Ghibli.all.each.with_index(1) do |movie, index|
-    #         puts "#{index}. #{movie.title}"
-    #     end
-    # end
-
     def print_movie_titles
             Studio_Ghibli.all.each.with_index(1) do |movie, index|
             puts "#{index}. #{movie.title}".colorize(:light_magenta)
@@ -34,8 +28,6 @@ class Cli
     end
 
     def movie_selection   
-        # input = gets.chomp.to_i 
-        # index = input.to_i - 1
         index = gets.chomp.to_i - 1
         last_element = Studio_Ghibli.all.size - 1 
         if index.between?(0,last_element)
