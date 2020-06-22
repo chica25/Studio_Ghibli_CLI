@@ -20,7 +20,6 @@ class Cli
         input = gets.chomp.downcase
         if input == "yes" || input == "y"
            print_movie_titles
-           #print_all
            puts "Please select a number:"
         else
             puts "Goodbye"
